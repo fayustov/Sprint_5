@@ -1,3 +1,6 @@
+import faker
+
+
 class Constants:
     BASE_URL = 'https://stellarburgers.nomoreparties.site/'
     REGISTRATION_URL = 'https://stellarburgers.nomoreparties.site/register'
@@ -8,4 +11,14 @@ class Constants:
         "name": "Testik Testovich",
         "email": "etoya@sofiarotaru.com",
         "password": "123456"
+    }
+    CORRECT_USER_DATA = {
+        "name": faker.Faker().name(),
+        "email": faker.Faker().email(),
+        "password": faker.Faker().password()
+    }
+    INCORRECT_USER_DATA = {
+        "name": "Имя",
+        "email": "test@email.com",
+        "password": "12345"
     }

@@ -7,6 +7,7 @@ from locators import Locators
 class TestsConstructor:
 
     def test_switch_to_buns_in_constructor(self, driver):
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.BURGER_INGREDIENTS_CONTAINER))
         driver.find_element(*Locators.TOPPINGS_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.TOPPINGS_LIST))
         driver.find_element(*Locators.BUNS_BUTTON).click()
